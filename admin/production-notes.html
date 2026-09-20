@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>ملاحظات تشغيل البوابة الإلكترونية</title>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+      background: #f5f7fa;
+      color: #172033;
+      line-height: 1.8;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 14px;
+      padding: 24px;
+      margin-bottom: 18px;
+      box-shadow: 0 4px 18px rgba(0,0,0,.06);
+    }
+
+    h1 {
+      margin-top: 0;
+      color: #1266a3;
+    }
+
+    h2 {
+      color: #1266a3;
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 8px;
+    }
+
+    code {
+      background: #eef2f7;
+      padding: 3px 7px;
+      border-radius: 5px;
+      direction: ltr;
+      display: inline-block;
+    }
+
+    .warning {
+      background: #fff7e6;
+      border-right: 5px solid #f0a500;
+      padding: 15px;
+      border-radius: 8px;
+    }
+
+    .success {
+      background: #eaf8f0;
+      border-right: 5px solid #20a464;
+      padding: 15px;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <div class="card">
+    <h1>ملاحظات تشغيل البوابة الإلكترونية</h1>
+
+    <p>
+      هذه الصفحة تحتوي على التعليمات الأساسية لتشغيل
+      وإدارة بوابة مركز طب وجراحة الفم والأسنان بالزنتان.
+    </p>
+
+    <div class="success">
+      تم تجهيز ملفات الواجهة العامة ولوحة الإدارة وربطها
+      بالهيكل البرمجي للمشروع.
+    </div>
+  </div>
+
+
+  <div class="card">
+    <h2>1. قاعدة البيانات</h2>
+
+    <p>
+      يستخدم المشروع قاعدة بيانات PostgreSQL في بيئة التشغيل الفعلية.
+    </p>
+
+    <ul>
+      <li>إنشاء قاعدة البيانات من ملف <code>database.sql</code>.</li>
+      <li>إدخال البيانات الأولية من ملف <code>seed.sql</code>.</li>
+      <li>إدخال جداول دوام الأطباء من ملف <code>schedule_seed.sql</code>.</li>
+    </ul>
+  </div>
+
+
+  <div class="card">
+    <h2>2. إعداد ملف البيئة</h2>
+
+    <p>
+      يتم إنشاء ملف باسم:
+    </p>
+
+    <p><code>.env</code></p>
+
+    <p>ويحتوي على إعدادات الاتصال بقاعدة البيانات والمفتاح السري للجلسات.</p>
+
+    <div class="warning">
+      لا تقم بنشر ملف <code>.env</code> أو كلمات المرور داخل GitHub.
+    </div>
+  </div>
+
+
+  <div class="card">
+    <h2>3. تشغيل الخادم</h2>
+
+    <p>
+      بعد تثبيت Node.js والحزم المطلوبة، يتم تشغيل الخادم بواسطة:
+    </p>
+
+    <p><code>npm install</code></p>
+
+    <p>ثم:</p>
+
+    <p><code>npm start</code></p>
+  </div>
+
+
+  <div class="card">
+    <h2>4. لوحة الإدارة</h2>
+
+    <p>
+      لوحة الإدارة موجودة داخل مجلد:
+    </p>
+
+    <p><code>admin/</code></p>
+
+    <p>وتحتوي على:</p>
+
+    <ul>
+      <li><code>index.html</code> — واجهة لوحة الإدارة.</li>
+      <li><code>admin.css</code> — تنسيق لوحة الإدارة.</li>
+      <li><code>admin.js</code> — وظائف لوحة الإدارة.</li>
+      <li><code>production-notes.html</code> — ملاحظات التشغيل.</li>
+    </ul>
+  </div>
+
+
+  <div class="card">
+    <h2>5. وظائف لوحة الإدارة</h2>
+
+    <ul>
+      <li>إدارة حجوزات المرضى.</li>
+      <li>عرض الأطباء.</li>
+      <li>إدارة الخدمات.</li>
+      <li>إدارة الإعلانات.</li>
+      <li>إدارة الإحصائيات.</li>
+      <li>تسجيل الدخول والخروج للمستخدمين المخولين.</li>
+    </ul>
+  </div>
+
+
+  <div class="card">
+    <h2>6. النسخ الاحتياطي</h2>
+
+    <p>
+      يتم استخدام ملف:
+    </p>
+
+    <p><code>backup.sh</code></p>
+
+    <p>
+      لإنشاء نسخة احتياطية من قاعدة بيانات PostgreSQL.
+    </p>
+  </div>
+
+
+  <div class="card">
+    <h2>7. الأمان</h2>
+
+    <ul>
+      <li>استخدام HTTPS في بيئة الإنتاج.</li>
+      <li>عدم استخدام كلمات مرور افتراضية.</li>
+      <li>تغيير كلمة مرور مدير النظام قبل التشغيل الفعلي.</li>
+      <li>عدم نشر بيانات الاتصال بقاعدة البيانات.</li>
+      <li>تفعيل النسخ الاحتياطي بصورة دورية.</li>
+    </ul>
+  </div>
+
+
+  <div class="card">
+    <h2>8. معلومات المركز</h2>
+
+    <p><strong>المركز:</strong> مركز طب وجراحة الفم والأسنان بالزنتان</p>
+
+    <p><strong>العنوان:</strong> الزنتان – المجمع الإداري – خلف مصرف الدم</p>
+
+    <p><strong>أيام العمل:</strong> الأحد إلى الخميس</p>
+
+    <p><strong>ساعات العمل:</strong> 8:30 صباحاً – 3:00 مساءً</p>
+  </div>
+
+
+  <div class="card">
+    <h2>9. تنبيه مهم</h2>
+
+    <div class="warning">
+      هذه الملفات تمثل مكونات المشروع البرمجية.
+      قبل نشر النظام للعامة يجب إعداد الخادم وقاعدة البيانات
+      ومتغيرات البيئة وHTTPS واختبار جميع وظائف لوحة الإدارة.
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
