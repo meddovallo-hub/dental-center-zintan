@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <title>مركز طب وجراحة الفم والأسنان بالزنتان</title>
+
+  <meta name="description"
+        content="البوابة الإلكترونية لمركز طب وجراحة الفم والأسنان بالزنتان">
+
+  <link rel="stylesheet" href="portal.css">
+</head>
+
+<body>
+
+<header class="hero">
+
+  <div class="container">
+
+    <div class="brand">
+      <div class="logo">🦷</div>
+
+      <div>
+        <h1>مركز طب وجراحة الفم والأسنان بالزنتان</h1>
+        <p>البوابة الإلكترونية للمركز</p>
+      </div>
+    </div>
+
+    <nav>
+      <a href="#home">الرئيسية</a>
+      <a href="#services">الخدمات</a>
+      <a href="#doctors">الأطباء</a>
+      <a href="#booking">حجز موعد</a>
+      <a href="#contact">التواصل</a>
+    </nav>
+
+  </div>
+
+</header>
+
+
+<main>
+
+<section id="home" class="section hero-section">
+
+  <div class="container">
+
+    <h2>مرحباً بكم في البوابة الإلكترونية</h2>
+
+    <p>
+      مركز طب وجراحة الفم والأسنان بالزنتان
+      يقدم خدمات علاجية وتشخيصية متخصصة في مجال طب وجراحة الأسنان.
+    </p>
+
+    <div class="actions">
+      <a class="button" href="#booking">حجز موعد</a>
+      <a class="button secondary" href="#services">استعراض الخدمات</a>
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="section">
+
+  <div class="container">
+
+    <div class="cards">
+
+      <div class="card">
+        <h3>🕘 ساعات العمل</h3>
+        <p>الأحد إلى الخميس</p>
+        <strong>8:30 صباحاً – 3:00 مساءً</strong>
+      </div>
+
+      <div class="card">
+        <h3>📍 العنوان</h3>
+        <p>
+          الزنتان – المجمع الإداري – خلف مصرف الدم
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>📅 حجز موعد</h3>
+        <p>يمكنكم تقديم طلب حجز موعد إلكترونياً.</p>
+        <a class="button" href="#booking">احجز الآن</a>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section id="services" class="section">
+
+  <div class="container">
+
+    <h2>خدمات المركز</h2>
+
+    <div id="serviceCards" class="cards">
+
+      <div class="card">
+        <h3>علاج جذور الأسنان</h3>
+        <p>علاج وحفظ الأسنان المصابة ومتابعة الحالات.</p>
+      </div>
+
+      <div class="card">
+        <h3>العلاج التحفظي</h3>
+        <p>علاج التسوس وترميم الأسنان والمحافظة عليها.</p>
+      </div>
+
+      <div class="card">
+        <h3>علاج اللثة</h3>
+        <p>تشخيص وعلاج أمراض اللثة.</p>
+      </div>
+
+      <div class="card">
+        <h3>خلع الأسنان</h3>
+        <p>إجراء حالات خلع الأسنان حسب الحالة الطبية.</p>
+      </div>
+
+      <div class="card">
+        <h3>الأشعة</h3>
+        <p>خدمات التصوير الشعاعي وتشخيص الحالات.</p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section id="doctors" class="section">
+
+  <div class="container">
+
+    <h2>الأطباء</h2>
+
+    <div id="doctorCards" class="cards">
+
+      <div class="card">
+        <h3>أطباء الأسنان</h3>
+        <p>
+          يضم المركز نخبة من أطباء الأسنان العاملين
+          حسب الجداول الأسبوعية المعتمدة.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>قسم الأشعة</h3>
+        <p>
+          يقدم قسم الأشعة خدمات التصوير اللازمة لتشخيص الحالات.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section id="booking" class="section">
+
+  <div class="container">
+
+    <h2>حجز موعد</h2>
+
+    <div class="card">
+
+      <form id="bookingForm">
+
+        <label>
+          اسم المريض
+          <input
+            id="patient_name"
+            name="patient_name"
+            type="text"
+            maxlength="120"
+            required>
+        </label>
+
+        <label>
+          رقم الهاتف
+          <input
+            id="phone"
+            name="phone"
+            type="tel"
+            maxlength="30"
+            required>
+        </label>
+
+        <label>
+          الخدمة المطلوبة
+          <select id="service_id" name="service_id" required>
+            <option value="">اختر الخدمة</option>
+          </select>
+        </label>
+
+        <label>
+          الطبيب
+          <select id="doctor_id" name="doctor_id">
+            <option value="">اختر الطبيب</option>
+          </select>
+        </label>
+
+        <label>
+          التاريخ
+          <input
+            id="appointment_date"
+            name="appointment_date"
+            type="date"
+            required>
+        </label>
+
+        <label>
+          الوقت
+          <input
+            id="appointment_time"
+            name="appointment_time"
+            type="time"
+            required>
+        </label>
+
+        <label>
+          ملاحظات
+          <textarea
+            id="notes"
+            name="notes"
+            maxlength="1000"
+            placeholder="اكتب أي ملاحظات إضافية"></textarea>
+        </label>
+
+        <button type="submit" class="button">
+          إرسال طلب الحجز
+        </button>
+
+      </form>
+
+      <div id="bookingMessage"></div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section id="statistics" class="section">
+
+  <div class="container">
+
+    <h2>إحصائيات المركز لعام 2025</h2>
+
+    <div class="cards">
+
+      <div class="card">
+        <h3>علاج الجذور</h3>
+        <strong>2270</strong>
+      </div>
+
+      <div class="card">
+        <h3>العلاج التحفظي</h3>
+        <strong>1878</strong>
+      </div>
+
+      <div class="card">
+        <h3>علاج اللثة</h3>
+        <strong>1016</strong>
+      </div>
+
+      <div class="card">
+        <h3>خلع الأسنان</h3>
+        <strong>1647</strong>
+      </div>
+
+      <div class="card">
+        <h3>صور OPG</h3>
+        <strong>3101</strong>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section id="contact" class="section">
+
+  <div class="container">
+
+    <h2>التواصل</h2>
+
+    <div class="card">
+
+      <p>
+        <strong>المركز:</strong>
+        مركز طب وجراحة الفم والأسنان بالزنتان
+      </p>
+
+      <p>
+        <strong>العنوان:</strong>
+        الزنتان – المجمع الإداري – خلف مصرف الدم
+      </p>
+
+      <p>
+        <strong>ساعات العمل:</strong>
+        الأحد إلى الخميس، 8:30 صباحاً – 3:00 مساءً
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+</main>
+
+
+<footer>
+
+  <p>
+    © مركز طب وجراحة الفم والأسنان بالزنتان
+  </p>
+
+  <p>
+    إدارة الشؤون الطبية
+  </p>
+
+</footer>
+
+
+<script src="portal.js"></script>
+
+</body>
+</html>
