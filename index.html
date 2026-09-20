@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>مركز طب وجراحة الفم والأسنان بالزنتان</title><link rel="stylesheet" href="/portal.css"></head>
+<body>
+<header><div class="brand"><div class="logo">🦷</div><div><b>مركز طب وجراحة الفم والأسنان بالزنتان</b><small>البوابة الإلكترونية</small></div></div>
+<nav><a href="#booking">حجز موعد</a><a href="#services">الخدمات</a><a href="#doctors">الأطباء</a><a href="#contact">التواصل</a><a href="/admin">الإدارة</a></nav></header>
+<section class="hero"><div><span class="tag">بوابة إلكترونية تجريبية</span><h1>احجز موعدك بسهولة<br><em>مع مركز الأسنان بالزنتان</em></h1><p>اختر الخدمة والطبيب والتاريخ، وستظهر لك الأوقات المتاحة مباشرة.</p><a class="cta" href="#booking">ابدأ الحجز</a></div><div class="hero-card"><b>مواعيد العمل</b><strong>الأحد – الخميس</strong><span>8:30 صباحًا – 3:00 مساءً</span><small>الزنتان – المجمع الإداري – خلف مصرف الدم</small></div></section>
+<main>
+<section id="booking" class="card"><h2>حجز موعد</h2><p class="muted">أدخل بياناتك واختر الموعد المناسب.</p>
+<div class="steps"><span class="active">1 البيانات</span><span>2 الموعد</span><span>3 التأكيد</span></div>
+<form id="bookingForm">
+<div class="grid"><label>اسم المريض<input id="patient_name" required maxlength="120" placeholder="الاسم الكامل"></label><label>رقم الهاتف<input id="phone" required maxlength="30" placeholder="09xxxxxxxx"></label></div>
+<div class="grid"><label>الخدمة<select id="service_id" required><option value="">جاري التحميل...</option></select></label><label>الطبيب<select id="doctor_id" required><option value="">اختر الطبيب</option></select></label></div>
+<div class="grid"><label>التاريخ<input id="appointment_date" type="date" required></label><label>الوقت<select id="appointment_time" required><option value="">اختر الطبيب والتاريخ أولًا</option></select></label></div>
+<label>ملاحظات<textarea id="notes" maxlength="1000" placeholder="ملاحظات اختيارية"></textarea></label>
+<button class="submit" type="submit">تأكيد طلب الحجز</button><div id="msg"></div></form>
+</section>
+<section id="confirmation" class="card confirmation" hidden><div class="check">✓</div><h2>تم تسجيل طلب الحجز</h2><p>احتفظ برقم الحجز التالي:</p><div id="bookingNo" class="booking-no"></div><button onclick="window.print()">طباعة الحجز</button><a href="#booking">حجز موعد آخر</a></section>
+<section id="services"><h2>خدمات المركز</h2><div id="serviceCards" class="cards"></div></section>
+<section id="doctors"><h2>الأطباء المتاحون للحجز الإلكتروني</h2><div id="doctorCards" class="cards"></div></section>
+<section id="contact" class="contact"><h2>التواصل</h2><p>📍 الزنتان – المجمع الإداري – خلف مصرف الدم</p><p>🕘 الأحد إلى الخميس: 8:30 ص – 3:00 م</p></section>
+</main><footer>© مركز طب وجراحة الفم والأسنان بالزنتان – البوابة الإلكترونية</footer>
+<script src="/portal.js"></script></body></html>
