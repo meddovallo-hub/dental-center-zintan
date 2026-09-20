@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>لوحة إدارة مركز طب وجراحة الفم والأسنان بالزنتان</title>
+  <link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+
+<header class="topbar">
+  <div>
+    <h1>لوحة إدارة مركز طب وجراحة الفم والأسنان بالزنتان</h1>
+    <p>إدارة الحجوزات والأطباء والخدمات والإعلانات والإحصائيات</p>
+  </div>
+  <button id="logoutBtn" type="button">تسجيل الخروج</button>
+</header>
+
+<main class="container">
+
+  <section id="loginSection" class="card">
+    <h2>تسجيل الدخول</h2>
+
+    <form id="loginForm">
+      <label>
+        اسم المستخدم
+        <input id="username" type="text" required autocomplete="username">
+      </label>
+
+      <label>
+        كلمة المرور
+        <input id="password" type="password" required autocomplete="current-password">
+      </label>
+
+      <button type="submit">دخول</button>
+    </form>
+
+    <p id="loginMessage" class="message"></p>
+  </section>
+
+
+  <section id="dashboardSection" hidden>
+
+    <div class="card">
+      <h2>لوحة التحكم</h2>
+      <p>مرحباً بك في لوحة إدارة المركز.</p>
+    </div>
+
+
+    <section class="card">
+      <h2>حجوزات المرضى</h2>
+
+      <div id="bookings" class="list">
+        جاري تحميل الحجوزات...
+      </div>
+    </section>
+
+
+    <section class="card">
+      <h2>الأطباء</h2>
+
+      <div id="doctors" class="list">
+        جاري تحميل الأطباء...
+      </div>
+    </section>
+
+
+    <section class="card">
+      <h2>الخدمات</h2>
+
+      <div id="services" class="list">
+        جاري تحميل الخدمات...
+      </div>
+
+      <form id="serviceForm">
+        <input id="serviceName" type="text" placeholder="اسم الخدمة">
+        <input id="serviceDescription" type="text" placeholder="وصف الخدمة">
+        <button type="submit">إضافة خدمة</button>
+      </form>
+    </section>
+
+
+    <section class="card">
+      <h2>الإعلانات</h2>
+
+      <div id="announcements" class="list">
+        جاري تحميل الإعلانات...
+      </div>
+
+      <form id="announcementForm">
+        <input id="announcementTitle" type="text" placeholder="عنوان الإعلان">
+        <textarea id="announcementBody" placeholder="نص الإعلان"></textarea>
+        <button type="submit">إضافة إعلان</button>
+      </form>
+    </section>
+
+
+    <section class="card">
+      <h2>الإحصائيات</h2>
+
+      <div id="stats" class="list">
+        جاري تحميل الإحصائيات...
+      </div>
+
+      <form id="statsForm">
+        <input id="statName" type="text" placeholder="اسم الإحصائية">
+        <input id="statValue" type="number" placeholder="القيمة">
+        <button type="submit">حفظ الإحصائية</button>
+      </form>
+    </section>
+
+  </section>
+
+</main>
+
+<script src="admin.js"></script>
+
+</body>
+</html>
